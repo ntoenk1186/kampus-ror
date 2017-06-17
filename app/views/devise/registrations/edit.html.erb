@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :day_of_birth %><br />
-    <%= f.date_field :day_of_birth, autofocus: true, class:"datepicker" %>
+    <%= f.date_field :day_of_birth, class:"datepicker" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
