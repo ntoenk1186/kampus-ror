@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'materialize-sass'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
+
+# User management
+gem 'devise'

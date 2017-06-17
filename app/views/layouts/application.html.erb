@@ -3,80 +3,18 @@
   <head>
     <title>Kampus RoR</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <header>
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">My Profile</a></li>
-        <li><a href="#!">My Courses</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Logout</a></li>
-      </ul>
-      <ul id="dropdown2" class="dropdown-content">
-        <li><a href="#!">My Profile</a></li>
-        <li><a href="#!">My Courses</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Logout</a></li>
-      </ul>
-      <nav>
-        <div class="container">
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Kampus RoR</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Untung G.<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Sign Up</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Untung G.<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <%= render "shared/header" %>
     <main>
       <div class="container">
+        <%= render "shared/message" %>
         <%= yield %>
       </div>
     </main>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Kampus RoR</h5>
-            <p class="grey-text text-lighten-4">Tempat belajar dan sharing programming Ruby On Rails</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Socials</h5>
-            <ul>
-              <li><i class="fa fa-facebook-square"></i>&nbsp;<a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/kampusror">Facebook</a></li>
-              <li><i class="fa fa-twitter-square"></i>&nbsp;<a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
-              <li><i class="fa fa-github"></i>&nbsp;<a class="grey-text text-lighten-3" href="#!">Github</a></li>
-              <li><i class="fa fa-youtube-square"></i>&nbsp;<a class="grey-text text-lighten-3" href="https://www.youtube.com/channel/UCBJ4Gt9cRuul0T98FOTd9Mw">Youtube</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-        © 2017 KampusRoR
-        </div>
-      </div>
-    </footer>
+    <%= render "shared/footer" %>
   </body>
-  <script>
-    $( document ).ready(function(){
-      $(".button-collapse").sideNav();
-      $(".dropdown-button").dropdown();
-    });
-  </script>
+  <%= render "shared/script" %>
 </html>
